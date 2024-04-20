@@ -1,0 +1,13 @@
+{
+    "base_url": "https://jsonplaceholder.typicode.com",
+    "resource": "/posts",
+    "post_data": {
+        "title": "created title",
+        "body": "message:post created successfully.",
+        "userId": 1
+    },
+    "update_data": {
+        "title": "updated title",
+        "body": "message:post updated successfully."
+    }
+}
