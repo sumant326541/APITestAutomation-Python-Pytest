@@ -20,9 +20,20 @@ def test_get_all_user():
     assert response.status_code == 200
 
 ```
+
+### Test step functionality : 
+
+* A detailed explanation of each step has been mentioned in test file.
+
 ## Running tests
 
+### Run All test case
+
 If your tests are contained inside a folder 'tests', then run the following command : `pytest tests` 
+
+### Run specific testcase/suite
+
+run the following command for read_operation tests : `pytest tests_read_operation.py` 
 
 ## Report
 
@@ -32,9 +43,10 @@ To generate html report, run the following command : `pytest tests --html=report
 
 Below test case will fail due to testing api provided not allow to update or create user in database but it will work with actual API
 
-test_create_post - assert 404 == 200
+* FAILED tests/test_delete_operation.py::test_delete_nonexisting_user - assert 200 == 404
 
-test_update_user - AssertionError: assert 'sunt aut fac...reprehenderit' == 'updated title'
+* FAILED tests/test_read_operation.py::test_verify_newly_created_user - assert 404 == 200
 
-test_delete_nonexisting_user - assert 200 == 404
+* FAILED tests/test_update_operation.py::test_update_user - AssertionError: assert 'sunt aut fac...reprehenderit' == 'updated title'
+
 
